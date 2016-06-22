@@ -29,6 +29,7 @@ finally:
 
 
 #using keywords
+# second write will overwrite the first, will not append
 
 try:
     with open(filename, mode='wt') as file:
@@ -40,7 +41,7 @@ except IOError as e:
     print('Eoor: {0}'.format(e))      
         
         
-#read from file 
+#read from file, using readlines, writelines is also used to write out a list of strings 
 
 try:
     with open(filename, mode='rt') as file:
