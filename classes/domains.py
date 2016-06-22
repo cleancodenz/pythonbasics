@@ -26,4 +26,22 @@ class Person:
         print("HELLOOOOO")
     def shout_new(self, what, how_many_times):
         for i in range(0, how_many_times):
-            print(what)    
+            print(what)
+    #setters, as _name access is not recommended
+    #if you do not see a machine setter, it might not be meant to be changed
+    def name(self,name):
+           #add some validations
+        if name == "" or str(name).isspace():
+            raise ValueError("Person's name must not be empty.")
+        self._name = name
+        
+    def set_name(self, name):
+        self._name = name
+    #getters
+    
+    def get_name(self):
+        return self._name
+        
+      
+            
+  
