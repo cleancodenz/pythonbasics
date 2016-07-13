@@ -1,0 +1,5 @@
+Multi line for one statement:
+    using parenthses:
+        (dataset
+         .map(lambda x: x + 2)
+         .reduce(lambda x, y: x * y))
